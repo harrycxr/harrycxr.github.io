@@ -66,10 +66,10 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
     <div class="card h-100 border-0 shadow-sm" style="background-color: var(--global-card-bg-color); border-radius: 10px; border: 1px solid var(--global-divider-color) !important;">
       <div class="card-body p-3">
         <h5 class="card-title font-weight-bold mb-2" style="font-size: 0.98rem; color: var(--global-theme-color);">
-          <i class="fa-solid fa-network-wired mr-1"></i> Sensor Network Fusion
+          <i class="fa-solid fa-network-wired mr-1"></i> Fusion Estimation for Uncertain Systems over Clustered Sensor Networks
         </h5>
         <p class="card-text text-muted mb-0" style="font-size: 0.88rem; line-height: 1.55;">
-          Parallel/sequential covariance intersection (CI) steady-state robust filtering; two-level decentralized fusion architectures in clustered networks.
+          Parallel & sequential covariance intersection (CI) steady-state robust filtering; two-level decentralized fusion architectures in clustered sensor networks.
         </p>
       </div>
     </div>
@@ -78,7 +78,7 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
     <div class="card h-100 border-0 shadow-sm" style="background-color: var(--global-card-bg-color); border-radius: 10px; border: 1px solid var(--global-divider-color) !important;">
       <div class="card-body p-3">
         <h5 class="card-title font-weight-bold mb-2" style="font-size: 0.98rem; color: var(--global-theme-color);">
-          <i class="fa-solid fa-chart-line mr-1"></i> Estimation Lower Bounds
+          <i class="fa-solid fa-chart-line mr-1"></i> Theoretical Lower Bound on State Estimation Performance
         </h5>
         <p class="card-text text-muted mb-0" style="font-size: 0.88rem; line-height: 1.55;">
           Kernelized Intrinsic McAulay-Seidman Bound (K-IMSB) for complex nonlinear state estimation performance limits.
@@ -90,7 +90,7 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
     <div class="card h-100 border-0 shadow-sm" style="background-color: var(--global-card-bg-color); border-radius: 10px; border: 1px solid var(--global-divider-color) !important;">
       <div class="card-body p-3">
         <h5 class="card-title font-weight-bold mb-2" style="font-size: 0.98rem; color: var(--global-theme-color);">
-          <i class="fa-solid fa-compass mr-1"></i> Observer & Control Design
+          <i class="fa-solid fa-compass mr-1"></i> Observer & Control Design under Multisource Complex Disturbances
         </h5>
         <p class="card-text text-muted mb-0" style="font-size: 0.88rem; line-height: 1.55;">
           Bi-level spatio-temporal state observers with selective state spaces; energy-efficient nonlinear model predictive control (NMPC).
