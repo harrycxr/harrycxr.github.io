@@ -1,0 +1,66 @@
+---
+layout: about
+title: about
+permalink: /
+subtitle: M.S. Student in Traffic Information Engineering & Control · Shanghai Maritime University
+
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
+  more_info: >
+    <p>Smart Deep Blue IoT Team</p>
+    <p>Shanghai Maritime University</p>
+    <p>No. 1550 Haigang Ave, Pudong, Shanghai</p>
+    <p>Email: <a href="mailto:caoxuran@stu.shmtu.edu.cn">caoxuran@stu.shmtu.edu.cn</a></p>
+
+news: true # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
+---
+
+## About Me
+
+I am currently a Master's student in **Traffic Information Engineering and Control** at **Shanghai Maritime University** (Rank: 1/45, GPA: 90.8/100), affiliated with the *Smart Deep Blue IoT Team*. Prior to this, I received my B.Eng. degree in **Software Engineering (Transportation Engineering)** from **East China Jiaotong University** in 2023 (Rank: 4/63, GPA: 88.1/100).
+
+My primary research interests focus on **Autonomous Underwater Vehicles (AUVs) / Marine Robotics**, **Multi-Source Information Fusion**, **Riemannian Optimization & Nonlinear Filtering**, and **Intelligent Trajectory Planning & Control**.
+
+---
+
+## Research Interests
+
+- **Localization & Tracking of Marine Vehicles**: Nonlinear filtering theory on Riemannian manifolds; adaptive robust state estimation under intermittent packet loss and measurement attenuation.
+- **Uncertain Systems & Clustered Sensor Network Fusion**: Parallel/sequential covariance intersection (CI) steady-state robust filtering; two-level decentralized fusion architectures.
+- **Theoretical Lower Bounds for Estimation**: Kernelized Intrinsic McAulay-Seidman Bound (K-IMSB) for nonlinear estimation problems.
+- **Observer & Controller Design under Complex Disturbances**: Bi-level spatio-temporal state observers with selective state spaces; energy-efficient nonlinear model predictive control (NMPC).
+
+---
+
+## Education
+
+- **M.S. in Traffic Information Engineering and Control** <span style="float:right;">*Sep. 2024 – Present*</span>  
+  *Shanghai Maritime University*, Shanghai, China  
+  - GPA: 90.8 / 100 (Rank: **1/45**)
+
+- **B.Eng. in Software Engineering (Transportation Engineering)** <span style="float:right;">*Sep. 2019 – Jun. 2023*</span>  
+  *East China Jiaotong University*, Nanchang, China  
+  - GPA: 88.1 / 100 (Rank: **4/63**), Outstanding Undergraduate Thesis
+
+---
+
+## Honors & Selected Awards
+
+- **Graduate First-Class Scholarship**, Shanghai Maritime University <span style="float:right;">2025</span>
+- **National Second Prize (Team Leader)**, The 21st China Post-Graduate Mathematical Contest in Modeling <span style="float:right;">2024</span>
+- **Outstanding Undergraduate Thesis**, East China Jiaotong University <span style="float:right;">2023</span>
+- **National First Prize (Team Leader)**, The 11th MathorCup University Mathematical Modeling Contest <span style="float:right;">2021</span>
+- **Undergraduate Second-Class Scholarship & Merit Student**, ECJTU <span style="float:right;">2020 – 2023</span>
+
+---
+
+## Professional Services & Affiliations
+
+- **Member**, Smart Deep Blue IoT Team (Shanghai High-level Discipline Construction Project)
+- **Student Member**, Operations Research Society of China (中国优选法统筹法与经济数学研究会)
+- **Licensed Operator**, China Radio Association Amateur Radio Operation Licence
+

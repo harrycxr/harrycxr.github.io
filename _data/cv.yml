@@ -1,0 +1,98 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Xuran Cao (操旭然)
+    - name: Date of Birth
+      value: December 2000
+    - name: Email
+      value: caoxuran@stu.shmtu.edu.cn
+    - name: Affiliation
+      value: Shanghai Maritime University
+    - name: Location
+      value: Shanghai, China
+
+- title: Education
+  type: time_table
+  contents:
+    - title: M.S. in Traffic Information Engineering and Control
+      institution: Shanghai Maritime University, Shanghai, China
+      year: 2024 - Present
+      description:
+        - "GPA: 90.8/100 (Rank: 1/45)"
+        - "Affiliation: Smart Deep Blue IoT Team (上海市高水平学科建设项目)"
+    - title: B.Eng. in Software Engineering (Transportation Engineering)
+      institution: East China Jiaotong University, Nanchang, China
+      year: 2019 - 2023
+      description:
+        - "GPA: 88.1/100 (Rank: 4/63)"
+        - "Honors: Outstanding Undergraduate Thesis"
+
+- title: Research Experience & Projects
+  type: time_table
+  contents:
+    - title: Open Project of the State Key Laboratory of Water Transport Control
+      institution: Principal Investigator / Participant (Project No. W26CG000063)
+      year: 2026 - 2027
+      description:
+        - Multi-source sea ice attitude fusion sensing and ship path dynamic planning for polar navigation.
+    - title: Youth Talent Support Project of China Institute of Navigation
+      institution: Participant (Project No. 2025010)
+      year: 2026
+      description:
+        - Multi-target localization and tracking in marine situation-aware networks under uncertainty.
+    - title: Shanghai "Chenguang Program" Project
+      institution: Participant (Project No. 24CGA52)
+      year: 2025 - 2026
+      description:
+        - Resource localization mechanism and acquisition strategy in dynamically uncertain marine sensor networks.
+    - title: National Natural Science Foundation of China (NSFC) Youth Program
+      institution: Participant (Project No. 52201401)
+      year: 2023 - 2025
+      description:
+        - Robust localization and tracking in marine sensor networks based on quantum optimization.
+
+- title: Industry & Internship Experience
+  type: time_table
+  contents:
+    - title: DP3 Dynamic Positioning Algorithm Engineer
+      institution: Shenyuanhai & Harbin Engineering Intelligent Equipment
+      year: 2026.07 - 2026.09
+      description:
+        - Formulated DP water tank test programs; developed OSV minimum energy weather vaning control methods and robust fault-tolerant state estimation strategies under packet loss.
+    - title: Intelligent Meteorological Navigation Algorithm Engineer
+      institution: Beijing Meteorological Navigation Center, National Meteorological Center
+      year: 2025.11 - 2026.02
+      description:
+        - Maritime route planning, weather monitoring, and analysis of environmental disturbance effects on surface ship kinematics.
+    - title: Project Team Leader
+      institution: NDRC - Microsoft Software Center
+      year: 2022.09 - 2022.11
+      description:
+        - Led team in designing an adaptive emergency broadcasting system based on passenger flow spatiotemporal characteristics.
+
+- title: Honors & Awards
+  type: time_table
+  contents:
+    - title: Graduate First-Class Scholarship (研究生一等奖学金)
+      institution: Shanghai Maritime University
+      year: 2025
+    - title: National Second Prize (全国二等奖, Team Leader)
+      institution: The 21st China Post-Graduate Mathematical Contest in Modeling
+      year: 2024
+    - title: Outstanding Bachelor's Thesis (本科优秀毕业论文)
+      institution: East China Jiaotong University
+      year: 2023
+    - title: National First Prize (全国一等奖, Team Leader)
+      institution: The 11th MathorCup University Mathematical Modeling Contest
+      year: 2021
+    - title: Third Prize, 17th Jiangxi University Student Computer Works Competition
+      institution: Jiangxi Province Computer Federation
+      year: 2022
+
+- title: Academic Services & Licenses
+  type: list
+  contents:
+    - Member, Smart Deep Blue IoT Team (Shanghai High-level Discipline Construction Project)
+    - Student Member, Operations Research Society of China (中国优选法统筹法与经济数学研究会)
+    - Certified Operator, China Radio Association Amateur Radio Operation Licence
