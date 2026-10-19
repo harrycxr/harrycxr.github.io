@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-02-20 10:00:00+0800
+date: 2026-04-01 09:00:00+0800
 inline: true
 related_posts: false
 ---
 
-🌊 Our paper *"Freshness-Constrained Semantic Task-Graph MARL for Underwater Cooperative Target Tracking"* has been accepted by **Ocean Engineering** (SCI Q2, IF=6.3)!
+🎉 Our paper *"Edge-Based Attitude Estimation for AUVs in Resource-Constrained IoUT Networks: A Kernelized IMSB Approach"* has been published in **IEEE Internet of Things Journal** (SCI Q1 Top, IF=8.7)!

@@ -167,6 +167,6 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
 
 <ul class="list-unstyled mt-3" style="font-size: 0.92rem; line-height: 2;">
   <li><i class="fa-solid fa-users mr-2" style="color: var(--global-theme-color);"></i> <strong>Core Member</strong>, Smart Deep Blue IoT Team (Shanghai High-Level Discipline Construction Project)</li>
-  <li><i class="fa-solid fa-id-badge mr-2" style="color: var(--global-theme-color);"></i> <strong>Student Member</strong>, Operations Research Society of China (ORSC)</li>
+  <li><i class="fa-solid fa-id-badge mr-2" style="color: var(--global-theme-color);"></i> <strong>Student Member</strong>, Chinese Society of Optimization, Overall Planning and Economic Mathematics (CSOOPEM​)</li>
   <li><i class="fa-solid fa-tower-broadcast mr-2" style="color: var(--global-theme-color);"></i> <strong>Certified Operator</strong>, China Radio Association Amateur Radio Operation Licence</li>
 </ul>
