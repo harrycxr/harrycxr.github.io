@@ -124,6 +124,13 @@ google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 
+# MapMyVisitors / ClustrMaps visitor map widget
+visitor_map:
+  enabled: true
+  provider: "mapmyvisitors" # options: "mapmyvisitors", "clustrmaps"
+  id: "" # MapMyVisitors widget token ID (e.g. xmc6i_SpmLS5vsiluLo5p5JnoxT3upiIFTown0TwlM0)
+  type: "map" # "map" (2D world map) or "globe" (3D rotating globe)
+
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
