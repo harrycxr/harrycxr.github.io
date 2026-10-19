@@ -23,7 +23,7 @@ social: true # includes social icons at the bottom of the page
 
 ## About Me
 
-I am currently a Master's student in **Traffic Information Engineering and Control** at **Shanghai Maritime University** (Rank: 1/45, GPA: 90.8/100). I am a core member of the **Smart Deep Blue IoT Team** (Shanghai High-Level Discipline Construction Project) and a **Student Member** of the **Operations Research Society of China (ORSC)**. Prior to this, I received my B.Eng. degree in **Software Engineering** from **East China Jiaotong University** in 2023 (Rank: 4/63, GPA: 88.1/100).
+I am currently a Master's student in **Traffic Information Engineering and Control** at **Shanghai Maritime University**. I am a core member of the **Smart Deep Blue IoT Team** and a **Student Member** of the **Chinese Society of Optimization, Overall Planning and Economic Mathematics (CSOOPEM​)**. Prior to this, I received my B.Eng. degree in **Software Engineering** from **East China Jiaotong University** in 2023.
 
 My primary research interests focus on **Underwater Unmanned System (UUS)**, **Multi-Source Information Fusion**, **Adaptive Robust State Estimation**, and **Perception-Planning & Control**.
 
@@ -54,7 +54,7 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
     <div class="card h-100 border-0 shadow-sm" style="background-color: var(--global-card-bg-color); border-radius: 10px; border: 1px solid var(--global-divider-color) !important;">
       <div class="card-body p-3">
         <h5 class="card-title font-weight-bold mb-2" style="font-size: 0.98rem; color: var(--global-theme-color);">
-          <i class="fa-solid fa-water mr-1"></i> Marine Robotics Localization
+          <i class="fa-solid fa-water mr-1"></i> 	Localization & Tracking for Autonomous Marine Platforms
         </h5>
         <p class="card-text text-muted mb-0" style="font-size: 0.88rem; line-height: 1.55;">
           Nonlinear filtering theory on Riemannian manifolds; adaptive robust state estimation under intermittent packet loss and measurement attenuation.
