@@ -1,17 +1,23 @@
 ---
 layout: page
-title: Marine Sensor Network Localization & Tracking
-description: Multi-target localization, robust state estimation, and QAOA-based node deployment in uncertain marine networks.
-img: assets/img/7.jpg
+title: Marine Sensor Network Localization & Multi-Target Tracking
+description: Optimal node deployment via QAOA and closed-form theoretical lower bounds (K-IMSB) for marine situation awareness.
+img: assets/img/projects/sensor_network.jpg
 importance: 2
-category: work
+category: Academic Research
 related_publications: true
 ---
 
 ### Project Overview
-Supported by the Youth Talent Support Project of China Institute of Navigation (No. 2025010) and Shanghai "Chenguang Program" (No. 24CGA52).
+Supported by the **Youth Talent Support Project of China Institute of Navigation** (中国航海学会青年人才托举项目, Project No. `2025010`, 2026.01).
 
-### Research Scope
-- **Optimal Sensor Deployment**: Integrated probability theory and information theory with Quantum Approximate Optimization Algorithm (**QAOA**) qubit superposition principles to formulate optimal node deployment strategies.
-- **Closed-Form Performance Bounds**: Derived closed-form expressions for the Kernelized Intrinsic McAulay-Seidman Bound (**K-IMSB**) via variational methods to evaluate sensory efficiency and optimize coverage vs. localization precision.
-- **Riemannian Covariance Intersection (CI)**: Developed low-conservatism state estimators by mapping covariance intersection fusion onto Riemannian manifolds under node drift, sensor packet drops, and heavy ocean disturbances.
+### Background & Challenges
+Deploying scalable underwater acoustic sensor networks in uncertain ocean environments requires balancing spatial coverage, energy constraints, and localization precision under sparse measurements and geometric dilution of precision.
+
+### Key Innovations & Methodology
+1. **QAOA-Based Sensor Deployment Optimization**:
+   - Discretized marine surveillance areas using probabilistic and information-theoretic formulations.
+   - Formulated sensor node placement as a combinatorial optimization problem solved via the **Quantum Approximate Optimization Algorithm (QAOA)**, leveraging quantum qubit superposition to break free from local minima.
+2. **Closed-Form Theoretical Lower Bounds (K-IMSB)**:
+   - Derived closed-form analytical expressions for the **Kernelized Intrinsic McAulay-Seidman Bound (K-IMSB)** using variational methods.
+   - Established rigorous performance metrics to assess sensory nodes' theoretical capability, achieving pareto-optimal trade-offs between coverage efficiency and multi-target tracking accuracy.
