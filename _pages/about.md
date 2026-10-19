@@ -21,9 +21,9 @@ social: true # includes social icons at the bottom of the page
 
 ## About Me
 
-I am currently a Master's student in **Traffic Information Engineering and Control** at **Shanghai Maritime University** (Rank: 1/45, GPA: 90.8/100), affiliated with the *Smart Deep Blue IoT Team*. Prior to this, I received my B.Eng. degree in **Software Engineering (Transportation Engineering)** from **East China Jiaotong University** in 2023 (Rank: 4/63, GPA: 88.1/100).
+I am currently a Master's student in **Traffic Information Engineering and Control** at **Shanghai Maritime University** (Rank: 1/45, GPA: 90.8/100), affiliated with the *Smart Deep Blue IoT Team*. Prior to this, I received my B.Eng. degree in **Software Engineering** from **East China Jiaotong University** in 2023 (Rank: 4/63, GPA: 88.1/100).
 
-My primary research interests focus on **Autonomous Underwater Vehicles (AUVs) / Marine Robotics**, **Multi-Source Information Fusion**, **Riemannian Optimization & Nonlinear Filtering**, and **Intelligent Trajectory Planning & Control**.
+My primary research interests focus on **Underwater Unmanned System (UUS)**, **Multi-Source Information Fusion**, **Adaptive Robust State Estimation**, and **Perception-Planning & Control**.
 
 ---
 
