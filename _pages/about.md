@@ -9,7 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Smart Deep Blue IoT Team</p>
     <p>Shanghai Maritime University</p>
     <p>No. 1550 Haigang Ave, Pudong, Shanghai</p>
     <p>Email: <a href="mailto:caoxuran@stu.shmtu.edu.cn">caoxuran@stu.shmtu.edu.cn</a> / <a href="mailto:cxr2123@sina.com">cxr2123@sina.com</a></p>
