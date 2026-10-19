@@ -15,13 +15,13 @@
 - title: Education
   type: time_table
   contents:
-    - title: M.S. in Traffic Information Engineering and Control（师从 Associate Professor Xiaojun Mei）
+    - title: M.S. in Traffic Information Engineering and Control (Advised by Assoc. Prof. Xiaojun Mei)
       institution: Shanghai Maritime University, Shanghai, China
       year: 2024 - Present
       description:
         - "GPA: 90.8/100 (Rank: 1/45)"
-        - "Affiliation: Smart Deep Blue IoT Team (上海市高水平学科建设项目)"
-    - title: B.Eng. in Software Engineering（师从副教授马亚锋）
+        - "Affiliation: Smart Deep Blue IoT Team (Shanghai High-Level Discipline Construction Project)"
+    - title: B.Eng. in Software Engineering (Advised by Assoc. Prof. Yafeng Ma)
       institution: East China Jiaotong University, Nanchang, China
       year: 2019 - 2023
       description:
@@ -73,19 +73,19 @@
 - title: Honors & Awards
   type: time_table
   contents:
-    - title: National Scholarship (国家奖学金)
+    - title: National Scholarship
       institution: Ministry of Education of China
       year: 2026
-    - title: Graduate First-Class Scholarship (研究生一等奖学金)
+    - title: Graduate First-Class Scholarship
       institution: Shanghai Maritime University
       year: 2025
-    - title: Graduate First-Class Scholarship (研究生一等奖学金)
+    - title: Graduate First-Class Scholarship
       institution: Shanghai Maritime University
       year: 2024
-    - title: National Second Prize (全国二等奖, Team Leader)
+    - title: National Second Prize (Team Leader)
       institution: The 21st China Post-Graduate Mathematical Contest in Modeling
       year: 2024
-    - title: National First Prize (全国一等奖, Team Leader)
+    - title: National First Prize (Team Leader)
       institution: The 11th MathorCup University Mathematical Modeling Contest
       year: 2021
     - title: Third Prize, 17th Jiangxi University Student Computer Works Competition
@@ -95,6 +95,6 @@
 - title: Academic Services & Licenses
   type: list
   contents:
-    - Member, Smart Deep Blue IoT Team (Shanghai High-level Discipline Construction Project)
-    - Student Member, Operations Research Society of China (中国优选法统筹法与经济数学研究会)
+    - Member, Smart Deep Blue IoT Team (Shanghai High-Level Discipline Construction Project)
+    - Student Member, Operations Research Society of China (ORSC)
     - Certified Operator, China Radio Association Amateur Radio Operation Licence
