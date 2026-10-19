@@ -140,11 +140,11 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
     <span class="badge badge-primary px-2 py-1" style="font-weight: 500;">2026</span>
   </li>
   <li class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
-    <span><i class="fa-solid fa-award mr-2" style="color: #f39c12;"></i> <strong>Graduate First-Class Scholarship</strong> (Top 5%), Shanghai Maritime University</span>
+    <span><i class="fa-solid fa-award mr-2" style="color: #f39c12;"></i> <strong>Graduate First-Class Scholarship</strong>, Shanghai Maritime University</span>
     <span class="badge badge-secondary px-2 py-1" style="font-weight: 500;">2025</span>
   </li>
   <li class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
-    <span><i class="fa-solid fa-award mr-2" style="color: #f39c12;"></i> <strong>Graduate First-Class Scholarship</strong> (Top 5%), Shanghai Maritime University</span>
+    <span><i class="fa-solid fa-award mr-2" style="color: #f39c12;"></i> <strong>Graduate First-Class Scholarship</strong>, Shanghai Maritime University</span>
     <span class="badge badge-secondary px-2 py-1" style="font-weight: 500;">2024</span>
   </li>
   <li class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-2">
