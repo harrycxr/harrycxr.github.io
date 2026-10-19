@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: December 2000
     - name: Email
-      value: caoxuran@stu.shmtu.edu.cn
+      value: caoxuran@stu.shmtu.edu.cn / cxr2123@sina.com
     - name: Affiliation
       value: Shanghai Maritime University
     - name: Location
@@ -15,18 +15,17 @@
 - title: Education
   type: time_table
   contents:
-    - title: M.S. in Traffic Information Engineering and Control
+    - title: M.S. in Traffic Information Engineering and Control（师从 Associate Professor Xiaojun Mei）
       institution: Shanghai Maritime University, Shanghai, China
       year: 2024 - Present
       description:
         - "GPA: 90.8/100 (Rank: 1/45)"
         - "Affiliation: Smart Deep Blue IoT Team (上海市高水平学科建设项目)"
-    - title: B.Eng. in Software Engineering (Transportation Engineering)
+    - title: B.Eng. in Software Engineering（师从副教授马亚锋）
       institution: East China Jiaotong University, Nanchang, China
       year: 2019 - 2023
       description:
         - "GPA: 88.1/100 (Rank: 4/63)"
-        - "Honors: Outstanding Undergraduate Thesis"
 
 - title: Research Experience & Projects
   type: time_table
@@ -74,15 +73,18 @@
 - title: Honors & Awards
   type: time_table
   contents:
+    - title: National Scholarship (国家奖学金)
+      institution: Ministry of Education of China
+      year: 2026
     - title: Graduate First-Class Scholarship (研究生一等奖学金)
       institution: Shanghai Maritime University
       year: 2025
+    - title: Graduate First-Class Scholarship (研究生一等奖学金)
+      institution: Shanghai Maritime University
+      year: 2024
     - title: National Second Prize (全国二等奖, Team Leader)
       institution: The 21st China Post-Graduate Mathematical Contest in Modeling
       year: 2024
-    - title: Outstanding Bachelor's Thesis (本科优秀毕业论文)
-      institution: East China Jiaotong University
-      year: 2023
     - title: National First Prize (全国一等奖, Team Leader)
       institution: The 11th MathorCup University Mathematical Modeling Contest
       year: 2021
