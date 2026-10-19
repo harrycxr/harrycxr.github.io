@@ -1,95 +1,130 @@
-// Has to be in the head tag, otherwise a flicker effect will occur.
+// Robust binary theme toggle (Dark / Light) with persistent localStorage and zero-flicker transitions
 
-// Toggle through light, dark, and system theme settings.
+// Toggle directly between light and dark
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
+  let current = determineComputedTheme();
+  let next = current === "dark" ? "light" : "dark";
+  setThemeSetting(next, true); // true = animate on user click
 };
 
 // Change the theme setting and apply the theme.
-let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+let setThemeSetting = (themeSetting, animate = false) => {
+  try {
+    localStorage.setItem("theme", themeSetting);
+  } catch (e) {}
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
+  applyTheme(animate);
+};
 
-  applyTheme();
+// Determine the computed theme ("dark" or "light")
+let determineComputedTheme = () => {
+  let themeSetting = null;
+  try {
+    themeSetting = localStorage.getItem("theme");
+  } catch (e) {}
+
+  if (themeSetting === "dark" || themeSetting === "light") {
+    return themeSetting;
+  }
+  // Default to system preference if user hasn't explicitly set one
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "light";
 };
 
 // Apply the computed dark or light theme to the website.
-let applyTheme = () => {
+let applyTheme = (animate = false) => {
   let theme = determineComputedTheme();
 
-  transTheme();
-  setHighlight(theme);
-  setGiscusTheme(theme);
-  setSearchTheme(theme);
-
-  // if mermaid is not defined, do nothing
-  if (typeof mermaid !== "undefined") {
-    setMermaidTheme(theme);
-  }
-
-  // if diff2html is not defined, do nothing
-  if (typeof Diff2HtmlUI !== "undefined") {
-    setDiff2htmlTheme(theme);
-  }
-
-  // if echarts is not defined, do nothing
-  if (typeof echarts !== "undefined") {
-    setEchartsTheme(theme);
-  }
-
-  // if vegaEmbed is not defined, do nothing
-  if (typeof vegaEmbed !== "undefined") {
-    setVegaLiteTheme(theme);
+  if (animate) {
+    transTheme();
   }
 
   document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme-setting", theme);
 
-  // Add class to tables.
-  let tables = document.getElementsByTagName("table");
-  for (let i = 0; i < tables.length; i++) {
-    if (theme == "dark") {
-      tables[i].classList.add("table-dark");
-    } else {
-      tables[i].classList.remove("table-dark");
-    }
+  try {
+    setHighlight(theme);
+  } catch (e) {}
+  try {
+    setGiscusTheme(theme);
+  } catch (e) {}
+  try {
+    setSearchTheme(theme);
+  } catch (e) {}
+
+  if (typeof mermaid !== "undefined") {
+    try {
+      setMermaidTheme(theme);
+    } catch (e) {}
   }
 
-  // Set jupyter notebooks themes.
-  let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
-  for (let i = 0; i < jupyterNotebooks.length; i++) {
-    let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-    if (theme == "dark") {
-      bodyElement.setAttribute("data-jp-theme-light", "false");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
-    } else {
-      bodyElement.setAttribute("data-jp-theme-light", "true");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
-    }
+  if (typeof Diff2HtmlUI !== "undefined") {
+    try {
+      setDiff2htmlTheme(theme);
+    } catch (e) {}
   }
 
-  // Updates the background of medium-zoom overlay.
+  if (typeof echarts !== "undefined") {
+    try {
+      setEchartsTheme(theme);
+    } catch (e) {}
+  }
+
+  if (typeof vegaEmbed !== "undefined") {
+    try {
+      setVegaLiteTheme(theme);
+    } catch (e) {}
+  }
+
+  // Update table classes safely
+  try {
+    let tables = document.getElementsByTagName("table");
+    for (let i = 0; i < tables.length; i++) {
+      if (theme === "dark") {
+        tables[i].classList.add("table-dark");
+      } else {
+        tables[i].classList.remove("table-dark");
+      }
+    }
+  } catch (e) {}
+
+  // Set jupyter notebooks themes safely
+  try {
+    let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
+    for (let i = 0; i < jupyterNotebooks.length; i++) {
+      let iframes = jupyterNotebooks[i].getElementsByTagName("iframe");
+      if (iframes.length > 0 && iframes[0].contentWindow && iframes[0].contentWindow.document) {
+        let bodyElement = iframes[0].contentWindow.document.body;
+        if (bodyElement) {
+          bodyElement.setAttribute("data-jp-theme-light", theme === "dark" ? "false" : "true");
+          bodyElement.setAttribute("data-jp-theme-name", theme === "dark" ? "JupyterLab Dark" : "JupyterLab Light");
+        }
+      }
+    }
+  } catch (e) {}
+
+  // Update medium-zoom overlay
   if (typeof medium_zoom !== "undefined") {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
-    });
+    try {
+      medium_zoom.update({
+        background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee",
+      });
+    } catch (e) {}
   }
 };
 
 let setHighlight = (theme) => {
-  if (theme == "dark") {
-    document.getElementById("highlight_theme_light").media = "none";
-    document.getElementById("highlight_theme_dark").media = "";
+  let light = document.getElementById("highlight_theme_light");
+  let dark = document.getElementById("highlight_theme_dark");
+  if (theme === "dark") {
+    if (light) light.media = "none";
+    if (dark) dark.media = "";
   } else {
-    document.getElementById("highlight_theme_dark").media = "none";
-    document.getElementById("highlight_theme_light").media = "";
+    if (dark) dark.media = "none";
+    if (light) light.media = "";
   }
 };
 
@@ -108,83 +143,86 @@ let setGiscusTheme = (theme) => {
 };
 
 let addMermaidZoom = (records, observer) => {
-  var svgs = d3.selectAll(".mermaid svg");
-  svgs.each(function () {
-    var svg = d3.select(this);
-    svg.html("<g>" + svg.html() + "</g>");
-    var inner = svg.select("g");
-    var zoom = d3.zoom().on("zoom", function (event) {
-      inner.attr("transform", event.transform);
+  try {
+    var svgs = d3.selectAll(".mermaid svg");
+    svgs.each(function () {
+      var svg = d3.select(this);
+      svg.html("<g>" + svg.html() + "</g>");
+      var inner = svg.select("g");
+      var zoom = d3.zoom().on("zoom", function (event) {
+        inner.attr("transform", event.transform);
+      });
+      svg.call(zoom);
     });
-    svg.call(zoom);
-  });
-  observer.disconnect();
+    observer.disconnect();
+  } catch (e) {}
 };
 
 let setMermaidTheme = (theme) => {
-  if (theme == "light") {
-    // light theme name in mermaid is 'default'
-    // https://mermaid.js.org/config/theming.html#available-themes
-    theme = "default";
-  }
+  try {
+    if (theme === "light") {
+      theme = "default";
+    }
 
-  /* Re-render the SVG, based on https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/mermaid.html */
-  document.querySelectorAll(".mermaid").forEach((elem) => {
-    // Get the code block content from previous element, since it is the mermaid code itself as defined in Markdown, but it is hidden
-    let svgCode = elem.previousSibling.childNodes[0].innerHTML;
-    elem.removeAttribute("data-processed");
-    elem.innerHTML = svgCode;
-  });
+    document.querySelectorAll(".mermaid").forEach((elem) => {
+      let svgCode = elem.previousSibling.childNodes[0].innerHTML;
+      elem.removeAttribute("data-processed");
+      elem.innerHTML = svgCode;
+    });
 
-  mermaid.initialize({ theme: theme });
-  window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    mermaid.initialize({ theme: theme });
+    window.mermaid.init(undefined, document.querySelectorAll(".mermaid"));
 
-  const observable = document.querySelector(".mermaid svg");
-  if (observable !== null) {
-    var observer = new MutationObserver(addMermaidZoom);
-    const observerOptions = { childList: true };
-    observer.observe(observable, observerOptions);
-  }
+    const observable = document.querySelector(".mermaid svg");
+    if (observable !== null) {
+      var observer = new MutationObserver(addMermaidZoom);
+      const observerOptions = { childList: true };
+      observer.observe(observable, observerOptions);
+    }
+  } catch (e) {}
 };
 
 let setDiff2htmlTheme = (theme) => {
-  document.querySelectorAll(".diff2html").forEach((elem) => {
-    // Get the code block content from previous element, since it is the diff code itself as defined in Markdown, but it is hidden
-    let textData = elem.previousSibling.childNodes[0].innerHTML;
-    elem.innerHTML = "";
-    const configuration = { colorScheme: theme, drawFileList: true, highlight: true, matching: "lines" };
-    const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
-    diff2htmlUi.draw();
-  });
+  try {
+    document.querySelectorAll(".diff2html").forEach((elem) => {
+      let textData = elem.previousSibling.childNodes[0].innerHTML;
+      elem.innerHTML = "";
+      const configuration = { colorScheme: theme, drawFileList: true, highlight: true, matching: "lines" };
+      const diff2htmlUi = new Diff2HtmlUI(elem, textData, configuration);
+      diff2htmlUi.draw();
+    });
+  } catch (e) {}
 };
 
 let setEchartsTheme = (theme) => {
-  document.querySelectorAll(".echarts").forEach((elem) => {
-    // Get the code block content from previous element, since it is the echarts code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-    echarts.dispose(elem);
+  try {
+    document.querySelectorAll(".echarts").forEach((elem) => {
+      let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+      echarts.dispose(elem);
 
-    if (theme === "dark") {
-      var chart = echarts.init(elem, "dark-fresh-cut");
-    } else {
-      var chart = echarts.init(elem);
-    }
+      if (theme === "dark") {
+        var chart = echarts.init(elem, "dark-fresh-cut");
+      } else {
+        var chart = echarts.init(elem);
+      }
 
-    chart.setOption(JSON.parse(jsonData));
-  });
+      chart.setOption(JSON.parse(jsonData));
+    });
+  } catch (e) {}
 };
 
 let setVegaLiteTheme = (theme) => {
-  document.querySelectorAll(".vega-lite").forEach((elem) => {
-    // Get the code block content from previous element, since it is the vega lite code itself as defined in Markdown, but it is hidden
-    let jsonData = elem.previousSibling.childNodes[0].innerHTML;
-    elem.innerHTML = "";
-    if (theme === "dark") {
-      vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" });
-    } else {
-      vegaEmbed(elem, JSON.parse(jsonData));
-    }
-  });
+  try {
+    document.querySelectorAll(".vega-lite").forEach((elem) => {
+      let jsonData = elem.previousSibling.childNodes[0].innerHTML;
+      elem.innerHTML = "";
+      if (theme === "dark") {
+        vegaEmbed(elem, JSON.parse(jsonData), { theme: "dark" });
+      } else {
+        vegaEmbed(elem, JSON.parse(jsonData));
+      }
+    });
+  } catch (e) {}
 };
 
 let setSearchTheme = (theme) => {
@@ -202,51 +240,49 @@ let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");
-  }, 500);
+  }, 400);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
-let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
-  }
-  return themeSetting;
-};
-
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
-let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    } else {
-      return "light";
-    }
-  } else {
-    return themeSetting;
-  }
-};
-
+// Initialize theme immediately on script load
 let initTheme = () => {
-  let themeSetting = determineThemeSetting();
+  // 1. Immediately apply theme to <html> before DOM finishes rendering
+  let theme = determineComputedTheme();
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme-setting", theme);
+  applyTheme(false); // NO transition animation on page load!
 
-  setThemeSetting(themeSetting);
-
-  // Add event listener to the theme toggle button.
-  document.addEventListener("DOMContentLoaded", function () {
+  // 2. Attach click listener once DOM elements are ready
+  let attachListener = () => {
     const mode_toggle = document.getElementById("light-toggle");
+    if (mode_toggle) {
+      mode_toggle.onclick = function (e) {
+        e.preventDefault();
+        toggleThemeSetting();
+      };
+    }
+    // Re-apply to all body elements safely
+    applyTheme(false);
+  };
 
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
-  });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", attachListener);
+  } else {
+    attachListener();
+  }
 
-  // Add event listener to the system theme preference change.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
-    applyTheme();
-  });
+  // 3. System preference change listener
+  if (window.matchMedia) {
+    try {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (!localStorage.getItem("theme")) {
+          applyTheme(true);
+        }
+      });
+    } catch (e) {}
+  }
 };
+
+window.initTheme = initTheme;
+window.toggleThemeSetting = toggleThemeSetting;
+
+initTheme();

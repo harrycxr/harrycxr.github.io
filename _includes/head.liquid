@@ -1,3 +1,17 @@
+<!-- Instant theme initialization to avoid flash and ensure theme persistence -->
+<script>
+  (function() {
+    try {
+      var theme = localStorage.getItem("theme");
+      if (!theme || (theme !== "dark" && theme !== "light")) {
+        theme = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.setAttribute("data-theme-setting", theme);
+    } catch (e) {}
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
