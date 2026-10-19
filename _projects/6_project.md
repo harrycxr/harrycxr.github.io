@@ -27,7 +27,7 @@ Developed during internship as **Intelligent Meteorological Navigation Algorithm
 - Designed an intention-aware interaction topology explicitly encoding the navigation rules stipulated in **COLREGS**, distinguishing reciprocal collision-avoidance commitments.
 
 #### 2. Bi-Level Decoupled Architecture with Selective State Spaces (SSM)
-- Integrated modern **Selective State Space Models (SSM)** to achieve long-sequence temporal memory while preserving $\mathcal{O}(N)$ linear computational complexity.
+- Integrated modern **Selective State Space Models (SSM)** to achieve long-sequence temporal memory while preserving $$\mathcal{O}(N)$$ linear computational complexity.
 - Alternated iterative execution between:
   - **Temporal Inertial Evolution Block**: Captures single-vessel kinematic and hydrodynamic inertia.
   - **Spatial Interaction Correction Block**: Compensates for topological disturbances induced by adjacent vessels.

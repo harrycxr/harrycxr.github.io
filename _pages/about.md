@@ -40,8 +40,8 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
   <a href="{{ '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" style="border: 1px solid var(--global-divider-color); border-radius: 20px; font-size: 0.84rem; padding: 0.3rem 0.85rem;">
     <i class="fa-solid fa-diagram-project mr-1" style="color: var(--global-theme-color);"></i> Projects
   </a>
-  <a href="{{ '/cv/' | relative_url }}" class="btn btn-sm z-depth-0" style="border: 1px solid var(--global-divider-color); border-radius: 20px; font-size: 0.84rem; padding: 0.3rem 0.85rem;">
-    <i class="fa-solid fa-file-lines mr-1" style="color: var(--global-theme-color);"></i> CV
+  <a href="{{ '/assets/pdf/Xuran_Cao_CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0" style="border: 1px solid var(--global-divider-color); border-radius: 20px; font-size: 0.84rem; padding: 0.3rem 0.85rem;">
+    <i class="fa-solid fa-file-pdf mr-1" style="color: var(--global-theme-color);"></i> CV (PDF)
   </a>
 </div>
 
