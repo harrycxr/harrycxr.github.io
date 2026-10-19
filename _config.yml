@@ -128,7 +128,7 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 visitor_map:
   enabled: true
   provider: "mapmyvisitors" # options: "mapmyvisitors", "clustrmaps"
-  id: "" # MapMyVisitors widget token ID (e.g. xmc6i_SpmLS5vsiluLo5p5JnoxT3upiIFTown0TwlM0)
+  id: "1P_t-XfEVUVb4SaTu03Kabh1SviCsNGvEv-rt2A0TU8" # MapMyVisitors widget token ID
   type: "map" # "map" (2D world map) or "globe" (3D rotating globe)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag

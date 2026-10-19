@@ -11,9 +11,9 @@
     <div class="card-body p-3 text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 150px; overflow-x: auto;">
       {% if site.visitor_map.id and site.visitor_map.id != "" %}
         {% if site.visitor_map.type == "globe" %}
-          <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d={{ site.visitor_map.id }}&x=y"></script>
+          <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d={{ site.visitor_map.id }}"></script>
         {% else %}
-          <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d={{ site.visitor_map.id }}&cl=ffffff&w=a&x=y"></script>
+          <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ site.visitor_map.id }}&cl=ffffff&w=a"></script>
         {% endif %}
       {% else %}
         <div class="py-3 px-2 text-center">
