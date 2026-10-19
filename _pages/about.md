@@ -11,7 +11,7 @@ profile:
   more_info: >
     <div style="font-size: 0.88rem; line-height: 1.7; margin-top: 0.5rem;">
       <p style="margin-bottom: 0.25rem;"><i class="fa-solid fa-building-columns mr-1" style="color: var(--global-theme-color); width: 16px;"></i> Shanghai Maritime Univ.</p>
-      <p style="margin-bottom: 0.25rem;"><i class="fa-solid fa-location-dot mr-1" style="color: var(--global-theme-color); width: 16px;"></i> No. 1550 Haigang Ave, Pudong, Shanghai</p>
+      <p style="margin-bottom: 0.25rem;"><i class="fa-solid fa-location-dot mr-1" style="color: var(--global-theme-color); width: 16px;"></i> Pudong, Shanghai, China</p>
       <p style="margin-bottom: 0.25rem;"><i class="fa-solid fa-envelope mr-1" style="color: var(--global-theme-color); width: 16px;"></i> <a href="mailto:caoxuran@stu.shmtu.edu.cn">caoxuran@stu.shmtu.edu.cn</a></p>
       <p style="margin-bottom: 0.25rem;"><i class="fa-regular fa-envelope mr-1" style="color: var(--global-theme-color); width: 16px;"></i> <a href="mailto:cxr2123@sina.com">cxr2123@sina.com</a></p>
     </div>
