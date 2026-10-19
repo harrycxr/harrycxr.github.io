@@ -42,7 +42,7 @@ My primary research interests focus on **Underwater Unmanned System (UUS)**, **M
   *Shanghai Maritime University*, Shanghai, China  
   - GPA: 90.8 / 100 (Rank: **1/45**)
 
-- **B.Eng. in Software Engineering (Transportation Engineering)** <span style="float:right;">*Sep. 2019 – Jun. 2023*</span>  
+- **B.Eng. in Software Engineering** <span style="float:right;">*Sep. 2019 – Jun. 2023*</span>  
   *East China Jiaotong University*, Nanchang, China  
   - GPA: 88.1 / 100 (Rank: **4/63**), Outstanding Undergraduate Thesis
 
